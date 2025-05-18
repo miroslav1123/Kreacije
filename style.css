@@ -1,94 +1,91 @@
 body {
-    background: #ddd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .calculator {
-    background: #999999; /* ceo digitron siv */
-    padding: 20px;
-    border-radius: 15px;
-    width: 320px;
-    box-shadow: 0 0 20px #666;
+  background: #999999;
+  padding: 20px;
+  border-radius: 15px;
+  width: 320px;
+  box-shadow: 0 0 20px #666;
 }
 
 #display {
-    width: 100%;
-    height: 60px;
-    background: #000000; /* ekran crn */
-    border: none;
-    border-radius: 10px;
-    color: #ffffff; /* tekst na ekranu beo */
-    font-size: 2.5rem;
-    text-align: right;
-    padding: 0 15px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  background: #000;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: right;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
 }
 
 .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
 }
 
 .btn {
-    border: none;
-    border-radius: 12px;
-    font-size: 1.5rem;
-    padding: 20px 0;
-    cursor: pointer;
-    user-select: none;
-    font-weight: bold;
-    transition: background 0.2s;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  padding: 20px 0;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  transition: background 0.2s;
 }
 
-/* Brojevi: narandžasti */
+/* Narandžasti brojevi */
 .btn.number {
-    background: #ff9800;
-    color: #000000;
-    box-shadow: 0 4px #cc7a00;
+  background: #ff9800;
+  color: #000;
+  box-shadow: 0 4px #cc7a00;
 }
 
 .btn.number:active {
-    box-shadow: 0 2px #cc7a00;
-    transform: translateY(2px);
+  box-shadow: 0 2px #cc7a00;
+  transform: translateY(2px);
 }
 
-/* Operacije: plave */
+/* Plave operacije */
 .btn.operator,
 .btn.equal,
 .btn.clear,
-.btn.decimal {
-    background: #2196f3;
-    color: #000000;
-    box-shadow: 0 4px #1769aa;
+.btn.decimal,
+.btn.power {
+  background: #2196f3;
+  color: #000;
+  box-shadow: 0 4px #1769aa;
 }
 
 .btn.operator:active,
 .btn.equal:active,
 .btn.clear:active,
-.btn.decimal:active {
-    background: #1769aa;
-    box-shadow: 0 2px #1769aa;
-    transform: translateY(2px);
-}
-
-/* Dugme za "=" je visoko 2 reda */
-.btn.equal {
-    grid-row: span 2;
-}
-
-/* Dugme "C" zauzima jednu kolonu */
-.btn.clear {
-    grid-column: span 1;
+.btn.decimal:active,
+.btn.power:active {
+  background: #1769aa;
+  box-shadow: 0 2px #1769aa;
+  transform: translateY(2px);
 }
 
 /* Nula zauzima dve kolone */
 .btn.zero {
-    grid-column: span 2;
+  grid-column: span 2;
+}
+
+/* = dugme ostaje poslednje */
+.btn.equal {
+  grid-column: span 1;
 }
